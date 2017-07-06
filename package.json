@@ -1,0 +1,45 @@
+{
+  "name": "hornung",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.8.0",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-plugin-syntax-exponentiation-operator": "6.13.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-regenerator-runtime": "^6.5.0",
+    "rollup": "^0.36.1",
+    "rollup-plugin-babel": "^2.6.1"
+  },
+  "systemjs": {
+    "main": "index.js",
+    "map": {
+      "lively.graphics": "../lively.graphics/dist/lively.graphics.js",
+      "lively.lang": "../lively.lang/dist/lively.lang.js",
+      "lively.bindings": "../lively.bindings/dist/lively.bindings.js",
+      "lively.morphic": "lively.morphic.js",
+      "svg-intersections": "../lively.morphic/dist/svg-intersections.js"
+    },
+    "meta": {
+      "../lively.graphics/dist/lively.graphics.js": {
+         "format": "global"
+      },
+      "../lively.lang/dist/lively.lang.js": {
+        "format": "global"
+      },
+      "../lively.bindings/dist/lively.bindings.js": {
+        "format": "global"
+      },
+      "../lively.morphic/dist/lively.morphic.js": {
+        "format": "global"
+      },
+      "../lively.morphic/dist/svg-intersections.js": {
+        "format": "global"
+      }
+    }
+  }
+}

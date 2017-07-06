@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ludwig Hornung</title>
+  </head>
+  <body style="margin: 0;">
+    <div id="lively-world"></div>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,500,500i,900" rel="stylesheet"> 
+    <script src="/lively.modules/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="/lively.modules/node_modules/babel-standalone/babel.js"></script>
+    <script src="/lively.modules/dist/lively.modules.js"></script>
+    <script>
+      var origin = document.location.origin;
+      "PointerEvent" in window ?
+            null : lively.resources.loadViaScript(`${origin}/lively.morphic/node_modules/pepjs/dist/pep.js`),
+      "fetch" in window ?
+            null : lively.resources.loadViaScript(`//cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.js`)
+    </script>
+    <script src="/hornung/dist/hornung.js"></script>
+  </body>
+</html>
